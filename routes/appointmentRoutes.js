@@ -3,7 +3,7 @@ const router = express.Router();
 const AppointmentsController = require('../controllers/appointmentController');
 const { auth } = require('../middlewares/auth.js');
 
-router.post('/createAppointment', auth, AppointmentsController.createAppointment);
+router.post('/createAppointment', AppointmentsController.createAppointment);
 router.get('/getAllAppointmentsByPage', AppointmentsController.getAllAppointmentsByPage);
 router.get('/getPendingAppointmentsByPage', AppointmentsController.getPendingAppointmentsByPage);
 router.get('/getCompleteAppointmentsByPage', AppointmentsController.getCompleteAppointmentsByPage);
